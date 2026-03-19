@@ -1,0 +1,29 @@
+易财道网站图片替换指南
+===================
+
+当前网站使用的图片：
+1. 第一张：line 136 - 抖音团购示意图
+   当前链接：https://gd-hbimg-edge.huaban.com/bb3e69ea77e8c0ad770406582b36dd0fe968e4f71844cb-Z6EhX8_fw658webp?auth_key=1773936000-07678d0afe484ad49b5c02fba04ed84a-0-f02026d700121094c52ba4e15fa8938f
+   替换代码：
+   <img src="your-new-image-url.jpg" alt="抖音团购示意" class="rounded-2xl shadow-2xl w-full object-cover">
+
+2. 第二张：line 446 - 微信二维码占位图
+   当前链接：https://placehold.co/240x240/0f172a/ffffff?text=扫码添加经理
+   替换代码：
+   <img src="your-qrcode-image-url.jpg" alt="项目经理微信" class="w-40 h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 rounded-2xl md:rounded-3xl object-cover">
+
+如何替换图片：
+1. 准备好您想要的新图片（建议尺寸：第一张至少600x400像素，第二张240x240像素）
+2. 将图片上传到图片托管服务（如阿里云OSS、腾讯云COS或其他CDN服务）
+3. 获取新图片的URL链接
+4. 编辑 index.html 文件，将对应的 src 属性值替换为新的图片URL
+
+或者，如果您想使用本地图片：
+1. 在网站根目录创建 images 文件夹
+2. 将图片放入该文件夹
+3. 修改 src 属性为相对路径，例如：src="./images/your-image.jpg"
+
+注意：
+- 确保图片格式为jpg、png或webp
+- 保持适当的图片大小以优化加载速度
+- 如果使用本地图片，请确保图片文件和HTML在同一服务器上
